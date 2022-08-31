@@ -43,7 +43,7 @@ want to remove the  ``if __name__ == "__main__": main()`` idiom altogether, be i
 understanding, concerns about future extensibility or any other reason.
 
 Example:
-    This::
+    This (following ``from main_function import main_function``) ::
 
         @main_function
         def main() -> None:
