@@ -20,11 +20,11 @@ Main Function
 
 
 
-A beginner-friendly decorator alternative to if __name__ == '__main__': main() idiom.
+A beginner-friendly decorator alternative to ``if __name__ == '__main__': main()`` idiom.
 
 
 This PyPi is meant to demonstrate a decorator-based alternative to the old-school idiom,
-if __name__ == '__main__': main(), indicating that a script is meant to be run directly,
+``if __name__ == '__main__': main()``, indicating that a script is meant to be run directly,
 in a way that that does not force beginners to wrap their head around magic methods
 and how Python works under the hood.  Purely from cursory overview of
 beginner-to-intermediate educational content available for free, the idea of using
