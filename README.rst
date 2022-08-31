@@ -44,21 +44,21 @@ decorator instead.
 Example:
     This:
     
-    ```
-    @main_function
-    def main() -> None:
-        print("Hello, world!")
-    ```
+```
+@main_function
+def main() -> None:
+    print("Hello, world!")
+```
     
     Is fully equivalent to this:
     
-    ```
-    def main() -> None:
-        print("Hello, world!")
+```
+def main() -> None:
+    print("Hello, world!")
 
-    if __name__ == "__main__":
-        main()
-    ```
+if __name__ == "__main__":
+    main()
+```
 
 For further discussion that has inspired this PyPi, please see this:
    https://discuss.python.org/t/built-in-is-main-function-as-a-more-beginner-
