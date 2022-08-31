@@ -2,11 +2,12 @@
 if __name__ == '__main__': main() idiom.
 
 This PyPi is meant to demonstrate a decorator-based alternative to the old-school idiom,
-if __name__ == '__main__': main(), indicating that a script is meant to be run directly,
-in a way that that does not force beginners to wrap their head around magic methods
-and how Python works under the hood.  Purely from cursory overview of
-beginner-to-intermediate educational content available for free, the idea of using
-magic methods for this specific purpose does seem to be the biggest source of confusion
+if __name__ == '__main__': main(). Traditionally, this idiom indicates that a script
+is meant to both be run directly and be imported as a module, but its (possibly unjustified)
+prevalence in educational materials nudges beginners to wrap their head around magic methods
+and how Python works under the hood before it might be appropriate.  Purely from cursory 
+overview of beginner-to-intermediate educational content available for free, the idea of 
+using magic methods for this specific purpose does seem to be the biggest source of confusion
 for people new to Python - as of the moment of writing this, YouTube video explaining
 what this bit of code does by Corey Schafer is sitting on 1,7 million views
 (one of his best), and video explaining the same concept by mCoding is at 865 thousand
