@@ -12,8 +12,9 @@ what this bit of code does by Corey Schafer is sitting on 1,7 million views
 (one of his best), and video explaining the same concept by mCoding is at 865 thousand
 views (his most viewed video ever). Question asking what this idiom does on StackOverflow
 has more than 7600 upvotes, and more than 3200 bookmarks (second most upvoted Python
-question). Furthermore, this fits in line with introduction of dataclasses, which
-is basically a way of declaring classes without writing boilerplate magic methods.
+question). Furthermore, this improvement  fits in line with introduction of
+dataclasses, which is basically a way of declaring classes without writing boilerplate
+magic methods.
 
 This module demonstrates a way of attaining the same control flow while not forcing
 newcomers to get acquainted with a traditional idiom, relyiong on a very telling
@@ -42,10 +43,10 @@ For further discussion that has inspired this PyPi, please see this:
 import inspect
 import sys
 from collections.abc import Callable
-from typing import Generic, ParamSpec, TypeVar
+from typing import ParamSpec, TypeVar
 
-P: ParamSpec = ParamSpec("P")
-R: Generic = TypeVar("R")
+P = ParamSpec("P")
+R = TypeVar("R")
 
 
 def main_function(func: Callable[P, R]) -> Callable[P, R]:
