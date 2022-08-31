@@ -42,10 +42,12 @@ For further discussion that has inspired this PyPi, please see this:
 
 """
 
+import atexit
 import inspect
 import sys
 from collections.abc import Callable
-from typing import ParamSpec, TypeVar
+from functools import partial
+from typing import Any, ParamSpec, TypeVar
 
 P = ParamSpec("P")
 R = TypeVar("R")
@@ -53,8 +55,18 @@ R = TypeVar("R")
 
 def main_function(func: Callable[P, R]) -> Callable[P, R]:
     """A beginner-friendly alternative to if __name__ == '__main__': main() idiom."""
+
+    def _atexit_clean_excepthook(exctype: Any, value: Any, traceback: Any):
+        """Defers the execution of the main function until clean, no-error termination
+        of the program."""
+        atexit.unregister(main_function)
+        sys.__excepthook__(exctype, value, traceback)
+
     if func.__module__ == "__main__":
         # If main() was not defined to take in sys.argv - run it as is.
         argspec = inspect.getfullargspec(func)
-        func() if not argspec.args and not argspec.varargs else func(sys.argv)
+        if argspec.args or argspec.varargs:
+            func = partial(func, sys.argv)
+        sys.excepthook = _atexit_clean_excepthook
+        atexit.register(func)
     return func
