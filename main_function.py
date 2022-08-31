@@ -5,8 +5,8 @@ This PyPi is meant to demonstrate a decorator-based alternative to the old-schoo
 if __name__ == '__main__': main(). Traditionally, this idiom indicates that a script
 is meant to both be run directly and be imported as a module, but its (possibly unjustified)
 prevalence in educational materials nudges beginners to wrap their head around magic methods
-and how Python works under the hood before it might be appropriate.  Purely from cursory 
-overview of beginner-to-intermediate educational content available for free, the idea of 
+and how Python works under the hood before it might be appropriate.  Purely from cursory
+overview of beginner-to-intermediate educational content available for free, the idea of
 using magic methods for this specific purpose does seem to be the biggest source of confusion
 for people new to Python - as of the moment of writing this, YouTube video explaining
 what this bit of code does by Corey Schafer is sitting on 1,7 million views
@@ -17,9 +17,10 @@ question). Furthermore, this improvement  fits in line with introduction of
 dataclasses, which is basically a way of declaring classes without writing boilerplate
 magic methods.
 
-This module demonstrates a way of attaining the same control flow while not forcing
-newcomers to get acquainted with a traditional idiom, relyiong on a very telling
-decorator instead.
+This very telling, self-explanatory decorator provides an alternative for people who don’t
+want to remove the if __name__ == "__main__": main() idiom altogether, be it for lack of
+understanding, concerns about future extensibility or any other reason.
+
 
 Example:
     This:
