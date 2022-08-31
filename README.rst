@@ -39,7 +39,7 @@ question). Furthermore, this improvement fits in line with introduction of datac
 which is basically a way of declaring classes without writing boilerplate magic methods.
 
 This very telling, self-explanatory decorator provides an alternative for people who don’t
-want to remove the  if __name__ == "__main__": main() idiom altogether, be it for lack of
+want to remove the  ``if __name__ == "__main__": main()`` idiom altogether, be it for lack of
 understanding, concerns about future extensibility or any other reason.
 
 Example:
