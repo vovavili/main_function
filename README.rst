@@ -43,11 +43,13 @@ decorator instead.
 
 Example:
     This:
+    
         @main_function
         def main() -> None:
             print("Hello, world!")
 
     Is fully equivalent to this:
+    
         def main() -> None:
             print("Hello, world!")
 
