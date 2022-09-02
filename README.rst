@@ -76,4 +76,6 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 License
 -------
-MIT
+MIT_
+
+.. _MIT: https://github.com/vovavili/main_function/blob/master/LICENSE
