@@ -49,11 +49,11 @@ from collections.abc import Callable
 from functools import partial
 from typing import Any, ParamSpec, TypeVar
 
-P = ParamSpec("P")
-R = TypeVar("R")
+T = TypeVar('T')
+P = ParamSpec('P')
 
 
-def main_function(func: Callable[P, R]) -> Callable[P, R]:
+def main_function(func: Callable[P, T]) -> Callable[P, T]:
     """A beginner-friendly alternative to if __name__ == '__main__': main() idiom."""
 
     def _atexit_clean_excepthook(etype: Any, value: Any, tb: Any) -> None:
