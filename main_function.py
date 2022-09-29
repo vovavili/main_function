@@ -59,7 +59,7 @@ def main_function(func: Callable[P, R]) -> Callable[P, R]:
     def _atexit_clean_excepthook(exctype: Any, value: Any, traceback: Any) -> None:
         """Defers the execution of the main function until clean, no-error termination
         of the program."""
-        atexit.unregister(main_function)
+        atexit.unregister(func)
         sys.__excepthook__(exctype, value, traceback)
 
     if func.__module__ == "__main__":
