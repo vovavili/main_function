@@ -64,7 +64,7 @@ def main_function(func: Callable[P, R]) -> Callable[P, R]:
 
     if func.__module__ == "__main__":
         # If main() was not defined to take in sys.argv - run it as is.
-        argspec = inspect.getfullargspec(func)
+        argspec: inspect.FullArgSpec = inspect.getfullargspec(func)
         if argspec.args or argspec.varargs:
             func = partial(func, sys.argv)
         sys.excepthook = _atexit_clean_excepthook
